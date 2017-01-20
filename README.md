@@ -1,6 +1,6 @@
 # FSecure Service
 
-This Assemblyline services interfaces with [FSecure Internet Gatekeeper](https://www.f-secure.com/en/web/business_global/products/internet-gatekeeper's) icap proxy.
+This Assemblyline services interfaces with [FSecure Internet Gatekeeper's](https://www.f-secure.com/en/web/business_global/products/internet-gatekeeper) icap proxy.
 
 **NOTE**: This service **requires you to buy** any licence. It also **requires you to install** gatekeeper on a seperate machine/VM. It is **not** preinstalled during a default installation
 
