@@ -3,7 +3,7 @@ This will install FSecure GateKeeper server on either a VM or a baremetal box.
 
 **Prerequisites:**
 
-* You have to install the Ubuntu base OS before. See [Install Ubuntu Server](build_doc.html?fname=install_ubuntu_server.md)
+* You have to install the Ubuntu base OS before. See [Install Ubuntu Server](documentation.html?fname=install_ubuntu_server.md)
 * You have a copy of the latest FSecure GateKeeper tar.gz installer in your home folder (Doc was built with version: 5.40.73)
 * You have a valid licence code
 
