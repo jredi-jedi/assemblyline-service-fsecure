@@ -27,7 +27,7 @@ class FSecure(ServiceBase):
     SERVICE_CATEGORY = 'Antivirus'
     SERVICE_DESCRIPTION = "This services wraps FSecure ICAP Proxy."
     SERVICE_ENABLED = True
-    SERVICE_REVISION = ServiceBase.parse_revision('$Id: e5c93cf246d7cbdbf25bbe523993b9047374e003 $')
+    SERVICE_REVISION = ServiceBase.parse_revision('$Id$')
     SERVICE_VERSION = '1'
     SERVICE_DEFAULT_CONFIG = {
         "ICAP_HOST": "localhost",
@@ -62,7 +62,7 @@ class FSecure(ServiceBase):
         infection_name = ''
         result_lines = icap_result.strip().splitlines()
         if not len(result_lines) > 3:
-            raise Exception('Invalid result from FSecure ICAP server: %s', str(icap_result))
+            raise Exception('Invalid result from FSecure ICAP server: %s' % str(icap_result))
 
         x_scan_result = 'X-FSecure-Scan-Result:'
         x_infection_name = 'X-FSecure-Infection-Name:'
