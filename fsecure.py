@@ -3,15 +3,15 @@
     This service interfaces with FSecure Internet Gatekeeper 5 via ICAP.
 """
 
-from assemblyline.al.common.result import Result, SCORE
 from assemblyline.al.common.av_result import VirusHitTag, VirusHitSection
+from assemblyline.al.common.result import Result, SCORE
 from assemblyline.al.service.base import ServiceBase
-from al_services.alsvc_kaspersky import icap
+from assemblyline.common import icap
 
 
 class FSecureIcapClient(icap.IcapClient):
     def __init__(self, host, port):
-        super(FSecureIcapClient, self).__init__(host, port, respmod_service='av/respmod')
+        super(FSecureIcapClient, self).__init__(host, port)
 
     def get_service_version(self):
         version = 'unknown'
