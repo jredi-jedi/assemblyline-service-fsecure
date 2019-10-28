@@ -23,18 +23,6 @@ class FSecureIcapClient(icap.IcapClient):
 
 
 class FSecure(ServiceBase):
-    SERVICE_CATEGORY = 'Antivirus'
-    SERVICE_DESCRIPTION = "This services wraps FSecure ICAP Proxy."
-    SERVICE_ENABLED = True
-    #SERVICE_REVISION = ServiceBase.parse_revision('$Id$')
-    SERVICE_VERSION = '1'
-    SERVICE_DEFAULT_CONFIG = {
-        "ICAP_HOST": "localhost",
-        "ICAP_PORT": 1344,
-    }
-    SERVICE_CPU_CORES = 0.3
-    SERVICE_RAM_MB = 128
-
     def __init__(self, cfg=None):
         super(FSecure, self).__init__(cfg)
         self.icap_host = None
