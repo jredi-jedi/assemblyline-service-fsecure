@@ -3,9 +3,8 @@
     This service interfaces with FSecure Internet Gatekeeper 5 via ICAP.
 """
 
-from assemblyline.al.common.av_result import VirusHitTag, VirusHitSection
-from assemblyline.al.common.result import Result, SCORE
-from assemblyline.al.service.base import ServiceBase
+from assemblyline_v4_service.common.result import Result, ResultSection
+from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline.common import icap
 
 
@@ -79,8 +78,9 @@ class FSecure(ServiceBase):
 
         result = Result()
         if infection_name:
-            result.add_section(VirusHitSection(infection_name, SCORE.SURE, detection_type=infection_type))
-            result.append_tag(VirusHitTag(infection_name))
+            res_sect = ResultSection(infection_name, 1000, classification=infection_type)
+            res_sect.add_tag(tag_type=infection_type, value=infection_name)
+            result.add_section(res_sect)
             
         return result
 
