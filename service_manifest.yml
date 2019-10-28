@@ -1,0 +1,39 @@
+name: FSecure
+version: 1
+description: >
+  The service uses a generic icap interface to send files to a proxy server for analysis.
+
+accepts: .*
+rejects: empty|metadata/.*
+
+stage: CORE
+category: Antivirus
+
+file_required: true
+timeout: 60
+disable_cache: false
+
+enabled: false
+is_external: false
+licence_count: 0
+
+config:
+  base_url: 'http://localhost:1344/'
+  md_version: 4
+  md_timeout: 40
+  min_node_time: 60
+  max_node_time: 300
+  max_md_scan_time: 5
+
+heuristics:
+  - heur_id: 1
+    name: File is infected
+    score: 1000
+    filetype: '*'
+    description: FSecure detected an infected file.
+
+docker_config:
+  image: cccs/assemblyline-service-fsecure:latest
+  cpu_cores: 0.1
+  ram_mb: 256
+

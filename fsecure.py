@@ -26,7 +26,7 @@ class FSecure(ServiceBase):
     SERVICE_CATEGORY = 'Antivirus'
     SERVICE_DESCRIPTION = "This services wraps FSecure ICAP Proxy."
     SERVICE_ENABLED = True
-    SERVICE_REVISION = ServiceBase.parse_revision('$Id$')
+    #SERVICE_REVISION = ServiceBase.parse_revision('$Id$')
     SERVICE_VERSION = '1'
     SERVICE_DEFAULT_CONFIG = {
         "ICAP_HOST": "localhost",
@@ -79,6 +79,7 @@ class FSecure(ServiceBase):
         result = Result()
         if infection_name:
             res_sect = ResultSection(infection_name, 1000, classification=infection_type)
+            res_sect.set_heuristic(1)
             res_sect.add_tag(tag_type=infection_type, value=infection_name)
             result.add_section(res_sect)
             
