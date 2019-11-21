@@ -1,7 +1,6 @@
 name: FSecure
 version: 1
-description: >
-  This services wraps FSecure ICAP Proxy.
+description: This services wraps FSecure ICAP Proxy.
 
 accepts: .*
 rejects: empty|metadata/.*
@@ -18,8 +17,8 @@ is_external: false
 licence_count: 0
 
 config:
-  ICAP_HOST: "localhost"
-  ICAP_PORT: 1344
+  icap_host: localhost
+  icap_port: 1344
 
 heuristics:
   - heur_id: 1
