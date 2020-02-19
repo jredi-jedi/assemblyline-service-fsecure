@@ -109,7 +109,7 @@ class FSecure(ServiceBase):
         self._av_info = 'FSecure Internet Linux 5. [%s]' % dbver.strip('"')
 
     def start(self):
-        self.icap_host = self.config.get('ICAP_HOST')
-        self.icap_port = int(self.config.get('ICAP_PORT'))
+        self.icap_host = self.config.get('ICAP_HOST', 'localhost')
+        self.icap_port = int(self.config.get('ICAP_PORT', 1344))
         self.icap = FSecureIcapClient(self.icap_host, self.icap_port)
         self._set_av_ver(self.icap.get_service_version())
