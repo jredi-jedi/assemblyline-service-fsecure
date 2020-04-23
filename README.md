@@ -1,6 +1,6 @@
 # FSecure Service
 
-This Assemblyline services interfaces with [FSecure Internet Gatekeeper's](https://www.f-secure.com/en/web/business_global/products/internet-gatekeeper) icap proxy.
+This Assemblyline services interfaces with [FSecure Internet Gatekeeper's](https://help.f-secure.com/product.html#business/igk/5.40/en) icap proxy.
 
 **NOTE**: This service **requires you to buy** a licence. It also **requires you to install** gatekeeper on a separate machine/VM. It is **not** preinstalled during a default installation
 
@@ -10,11 +10,7 @@ The service uses our generic icap interface to send files to the proxy server fo
 
 ## Installation of FSecure GK
 
-To install FSecure GK you can follow our detailed documentation [here](icap_installation/install_notes.md).
-
-## Updates
-
-This service supports auto-update in both online and offline environments. This is configurable in the service config.
+To install FSecure GK you can follow our detailed documentation [here](docs/icap_installation_notes.md).
 
 ## Licensing
 
