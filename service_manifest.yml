@@ -1,5 +1,5 @@
 name: FSecure
-version: 1
+version: $SERVICE_TAG
 description: This services wraps FSecure ICAP Proxy.
 
 accepts: .*
@@ -28,7 +28,7 @@ heuristics:
     description: FSecure detected an infected file.
 
 docker_config:
-  image: cccs/assemblyline-service-fsecure:latest
+  image: ${REGISTRY}cccs/assemblyline-service-fsecure:$SERVICE_TAG
   cpu_cores: 0.5
   ram_mb: 256
 
